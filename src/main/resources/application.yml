@@ -1,12 +1,21 @@
 application:
   name: spring-batch-poc
 
+logging:
+  config: log4j.xml
+
+app:
+  datasource:
+    jdbcUrl: ${APP_DB_URL:jdbc:mysql://localhost:3306/appdb}
+    username: ${APP_DB_USR:root}
+    password: ${APP_DB_PWD:admin}
+
 spring:
   application:
     name: ${application.name}
 
   datasource:
-    url: ${DB_URL:jdbc:mysql://localhost:3306/springbatchpocdb}
+    jdbcUrl: ${DB_URL:jdbc:mysql://localhost:3306/springbatchpocdb}
     username: ${DB_USR:root}
     password: ${DB_PWD:admin}
 
