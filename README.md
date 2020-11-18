@@ -5,6 +5,12 @@
 
 ***
 
+### Logs
+A app utiliza o log4j2 (log4j.xml) gravando os logs em: 
+> `/logs/app.log`
+
+***
+
 ### 1. Steps para Rodar Localmente:
 1. `mvn install`
 2. `docker-compose up -d`
