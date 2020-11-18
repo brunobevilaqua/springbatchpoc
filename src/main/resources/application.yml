@@ -1,0 +1,27 @@
+application:
+  name: spring-batch-poc
+
+spring:
+  application:
+    name: ${application.name}
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/springbatchpocdb}
+    username: ${DB_USR:root}
+    password: ${DB_PWD:admin}
+
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+        use_sql_comments: false
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  batch:
+    initialize-schema: always
