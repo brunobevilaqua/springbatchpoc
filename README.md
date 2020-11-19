@@ -12,10 +12,11 @@ A app utiliza o log4j2 (log4j.xml) gravando os logs em:
 ***
 
 ### 1. Steps para Rodar Localmente:
-1. `mvn install`
-2. `docker-compose up -d`
-3. run `SpringbatchpocApplication`
-
+- 1.1: `mvn clean install -U`
+- 1.2: `docker-compose up --build -V`
+- 1.3: rode a classe `SpringbatchpocApplication` com os seguintes argumentos:
+    - `customerFile=file:files/customers.txt customersDelimitedFile=file:files/customers_delimited.txt`
+      
 ***
 
 ### 2. Spring Batch Metadados:
